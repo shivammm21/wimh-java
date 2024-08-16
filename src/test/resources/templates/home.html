@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body id="body" class="body ">
+
+<div data-th-replace="~{fragments/navbar :: home-navbar}"></div>
+
+    <button onclick="openFileDialog()" class="clear-blur">Upload Image</button>
+    <input type="file" id="file-input" class="hidden" accept="image/*" onchange="loadImage(event)">
+</div>
+
+
+
+<div style="height: 10vh;width: 100vw;margin-top: 0vh;"></div>
+<div class="dash-hero-div">
+
+</div>
+<div style="height: 50vh;width: 100vw;background-color: rgb(20, 14, 75);">
+
+</div>
+</body>
+<script src="./JAVASCRIPT/script.js"></script>
+</html>

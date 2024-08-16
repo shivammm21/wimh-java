@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body id="body" class="login-page-body">
+
+
+    <div class="login-WIMH-logo-div">
+        <img class="login-WIMH-logo-img" src="./img/WIMH LOGO.png" alt="not found">
+    </div>
+    <form action="/login" method="post" th:object="${loginRequest}">
+    <div class="login-div">
+        <h1 class="login-char">Login</h1>
+        <input class="login-input-contact " name="mobileNumber" id="login-input-contact" type="tel" placeholder="Mobile no" required><br>
+        <!--<button class="login-send-otp-btn" id="login-send-otp-btn" onclick="loginsendOTP()">Send OTP</button><br> -->
+        <input class="login-input-otp" name="otp" id="login-input-otp" type="text" placeholder="Enter OTP" required><br>
+        <h6 class="login-resend-otp" id="login-resend-otp">Resend OTP<span id="timer">&nbsp;00:30</span></h6><br>
+        <button class="login-btn" id="login-btn">Login</button><br>
+        <h1 class="login-or-char">or</h1>
+        <div class="login-with-google-div">
+
+            <img class="login-with-google-img" src="./img/Continue_with_Google.png" alt="not found">
+
+        </div>
+    </div>
+    <a href="/register" style="text-decoration: none;"><h6 class="dont-have-account">Don't have an account? Signup</h6></a>
+
+</form>
+</body>
+<script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+<script>
+    function handleCredentialResponse(response) {
+        console.log("Encoded JWT ID token: " + response.credential);
+        // Send the token to your server for verification and user authentication
+        const token = response.credential;
+        fetch('/login/google', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({token})
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.href = '/dashboard'; // Redirect to the dashboard
+            } else {
+                alert('Google Sign-In failed.');
+            }
+        });
+    }
+
+    window.onload = function () {
+        google.accounts.id.initialize({
+            client_id: 'YOUR_GOOGLE_CLIENT_ID',
+            callback: handleCredentialResponse
+        });
+        google.accounts.id.renderButton(
+            document.getElementById("login-with-google-div"), // HTML element to render the button
+            { theme: "outline", size: "large" } // customization attributes
+        );
+        google.accounts.id.prompt(); // Automatically prompts the user to sign in
+    }
+</script>
+
+</script>
+
+<script src="./img/script.js"></script>
+</html>

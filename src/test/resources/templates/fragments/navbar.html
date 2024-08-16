@@ -1,0 +1,69 @@
+<div data-th-fragment="index-navbar" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="nav-bar">
+        <div class="navbar-menu">
+            <li>CONTACT US</li>
+            <li>ABOUT</li>
+            <li>FAQ</li>
+        </div>
+        <button onclick="dispLoginDiv()" class="nav-bar-login-btn">LOGIN</button>
+        <img class="WIMH-logo" src="./Images/WIMH LOGO.png" alt="not found">
+        <div class="search-container">
+            <input type="text" class="search-box" id="search-box" placeholder="SEARCH HERE....">
+            <ul class="suggestions-list" id="suggestions-list"></ul>
+        </div>
+        <button class="navbar-search-btn">Search</button>
+        <img id="threelineicon" class="threelineicon" onclick="mobileMenu()" src="./Images/threelineicon.png" alt="not found">
+    </div>
+    <div id="threeline-menu-list" class="threeline-menu-list">
+        <img class="WIMH-logo-menu-list" src="./Images/WIMH LOGO.png" alt="not found">
+        <h3 class="menu-item" onclick="dispLoginDiv()">LOGIN</h3>
+        <h3>CONTACT US</h3>
+        <h3>ABOUT</h3>
+        <h3>FAQ</h3>
+    </div>
+    <div id="login-div" class="login-div clear-blur">
+        <div class="login-div-left clear-blur">
+            <h1 class="login-char clear-blur">LOGIN</h1>
+            <div class="login-info-container-div clear-blur">
+                <input class="login-input-contact clear-blur" type="tel" placeholder="Mobile no" required><br>
+                <button class="login-btn clear-blur">LOGIN</button>
+            </div>
+        </div>
+        <div class="login-div-right clear-blur">
+            <h1 class="signup-char clear-blur">SIGNUP</h1>
+            <div class="signup-info-container-div clear-blur">
+                <input class="signup-input-name clear-blur" type="text" placeholder="Name" required><br>
+                <input class="signup-input-mail clear-blur" type="email" placeholder="E-mail" required><br>
+                <input class="signup-input-contact clear-blur" type="tel" placeholder="Mobile no" required><br>
+                <button class="signup-btn clear-blur">SIGNUP</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-th-fragment="home-navbar" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="dash-nav-bar">
+        <img class="dash-profileicon" onclick="dispProfileDiv()" th:src="@{/images/profile-pic (2).png}" alt="not found">
+        <img class="dash-WIMH-logo" th:src="@{/images/logo.png}" alt="not found">
+        <div class="dash-search-container">
+            <input type="text" class="dash-search-box" id="dash-search-box" placeholder="SEARCH HERE....">
+            <ul class="dash-suggestions-list" id="dash-suggestions-list"></ul>
+        </div>
+        <button class="dash-navbar-search-btn">Search</button>
+        <img id="dash-threelineicon" class="dash-threelineicon" onclick="dashmobileMenu()" src="./Images/threelineicon.png" alt="not found">
+    </div>
+    <div id="dash-threeline-menu-list" class="dash-threeline-menu-list">
+        <img class="dash-WIMH-logo-menu-list" src="./Images/WIMH LOGO.png" alt="not found">
+        <h3 class="dash-menu-item">CONTACT US</h3>
+        <h3>ABOUT</h3>
+        <h3>FAQ</h3>
+        <h3 onclick="dispLoginDiv()">LOGOUT</h3>
+    </div>
+    <div id="profile-div" class="profile-div clear-blur">
+        <div class="profile-pic clear-blur" id="profile-pic">
+
+        </div>
+        <button onclick="openFileDialog()" class="clear-blur">Upload Image</button>
+        <input type="file" id="file-input" class="hidden" accept="image/*" onchange="loadImage(event)">
+    </div>
+</div>

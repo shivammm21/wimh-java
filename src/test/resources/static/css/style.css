@@ -1,0 +1,446 @@
+body, html{
+  margin: 0;
+}
+.nav-bar{
+  margin-top: -70vh; 
+  height: 160vh;
+  width: 100vw;
+  background-color: rgba(27, 27, 27, 0.192);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  display: flex;
+  border-radius: 0 0 50% 50%;
+  transition: border-radius .5s ease, height .5s ease;
+}
+.navbar-menu{
+  display: flex;
+  position: absolute;
+  margin-top: 71.8vh;
+  margin-left: 60vw;
+  transition: margin-left .5s ease,opacity .2s ease,visibility .2s ease;
+}
+.navbar-menu li{
+  font-size: 2vh;
+  font-size: 1.5vw;
+  margin-left: 2vw;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  list-style-type: none;
+  cursor: pointer;
+  font-family: 'Poppins',sans-serif;
+  transition: background-color .5s ease;
+}
+.navbar-menu li:hover{
+  background-color: rgba(248, 252, 252, 0.39);
+}
+/*.nav-bar:hover{
+  border-radius: 0 0 0 0;
+  height: 81vh;
+}*/
+.nav-bar-login-btn{
+  height: 7.5vh;
+  width: 12vw;
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  letter-spacing: 2px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 2.3vw;
+  margin-top: 71.8vh;
+  transition: background-color .5s ease;
+  font-size: 2vh;
+  font-size: 1.5vw;
+  cursor: pointer;
+  transition: margin-left .5s ease, opacity .6s ease, visibility .6s ease;
+}
+.nav-bar-login-btn:hover{
+  background-color: rgba(248, 252, 252, 0.39);
+}
+.WIMH-logo{
+  margin-top: 85vh;
+  height: 40vh;
+  width: 52vw;
+  margin-left: 8.8vw;
+  transition: margin-top .5s ease, margin-left .5s ease, height .5s ease, width .5s ease;
+}
+.search-container{
+  margin-top: 128vh;
+  position:absolute;
+  width: 25.15vw;
+  margin-left: 28.69vw;
+  transition: margin-top .5s ease, margin-left .5s ease;
+}
+.search-box{
+  width: 30.15vw;
+  height: 7.94vh;
+  padding: 0px;
+  border: 1px solid #ccc;
+  border-radius: 8px 8px 0px 0px;
+  outline: none;
+  border: none;
+  font-size: 20px; 
+  padding-left: 3%;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 530;
+  transition: height .5s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+}
+
+.suggestions-list li{
+  padding: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+.suggestions-list li:hover {
+  background-color: #f0f0f0;
+}
+.suggestions-list{
+  position: absolute;
+  top: 0px;
+  width: 28.06vw;
+  border: none;
+  box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.651), /* Bottom shadow */
+  5px 0 5px -5px rgba(0, 0, 0, 0.651), /* Right shadow */
+  -5px 0 5px -5px rgba(0, 0, 0, 0.651); /* Left shadow */
+  border-radius: 0px 0px 8px 8px;
+  background-color: #fff;
+  list-style: none;
+  margin-top: 7.9vh;
+  display: none;
+  transition: margin-top .5s ease;
+}
+.navbar-search-btn{
+  display: flex;
+  position: absolute;
+  height: 6.5vh;
+  width: 10vw;
+  border: 2px solid rgba(0, 0, 0, 0.753);
+  background-color: transparent;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 60.3vw;
+  margin-top: 128.7vh;
+  padding-top: 1.12vh;
+  padding-left: 2.40vw;
+  transition: background-color .5s ease;
+  font-size: 2.5vh;
+  font-size: 1.4vw;
+  cursor: pointer;
+  transition: margin-top .5s ease, margin-left .5s ease;
+}
+.navbar-search-btn:hover{
+  background-color: rgba(248, 252, 252, 0.39);
+}
+.threelineicon{
+  height: 8vh;
+  width: 4.03vw;
+  margin-left: 16.2vw;
+  margin-top: 71.5vh;
+  cursor: pointer;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: margin-left .5s ease, opacity .5s ease, visibility .5s ease, background-color .3s ease;
+  border: none;
+}
+.threelineicon:hover{
+  background-color: rgba(248, 252, 252, 0.39);
+}
+.threeline-menu-list {
+  display: block; /* Ensure it's part of the DOM, but hidden with transform and opacity */
+  height: 100vh;
+  width: 22vw;
+  background-color: rgba(27, 27, 27, 0.192);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  right: 0; /* Position from the right */
+  overflow: hidden;
+  transform: translateX(100%); /* Start hidden to the right */
+  opacity: 0; /* Start hidden */
+  z-index: 1000;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.WIMH-logo-menu-list{
+  height: 11vh;
+  width: 18vw;
+  margin-top: 3vh;
+  margin-left: 1.9vw;
+}
+.threeline-menu-list h3{
+  width: 100%;
+  height: 7vh;
+  top: 0;
+  margin-bottom: -3.9vh;
+  padding-left: 4vw;
+  padding-top: 3vh;
+  color: black;
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 2.8vh;
+  font-size: 1.82vw;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color .5s ease;
+}
+.menu-item{
+  margin-top: 4vh;
+}
+.threeline-menu-list h3:hover{
+  background-color: #8aa78a;
+}
+.blurred-body *:not(.clear-blur) {
+  filter: blur(2px);
+  
+}
+
+/* Clear the blur for the specific div */
+.clear-blur {
+  filter: none;
+ 
+}
+.login-div {
+  display: flex;
+  height: 500px;
+  width: 800px;
+  margin-top: 50px;
+  margin-left: 280px;
+  position: fixed;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(112, 111, 111);
+  z-index: 1;
+  transform: translateY(500px);
+  opacity: 0;
+  visibility:hidden;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+.login-div-left{
+  height: 100%;
+  width: 50%;
+  border-radius: 20px 0 0 20px;
+  background-color: #4251db;
+  overflow: hidden;
+}
+.login-char{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 1px;
+  margin-left: 35%;
+  margin-top: 10%;
+  cursor: pointer;
+  color: #262d6e;
+}
+.login-input-contact{
+  height: 38px;
+  width: 258px;
+  border-radius: 8px;
+  margin-left: 16%;
+  margin-top: 2%;
+  font-size: 18px; 
+  padding-left: 3%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  font-family:calibri;
+  outline: none;
+  border: none;
+  transition: margin-top 0.5s ease-in-out;
+}
+.login-btn{
+  position: relative;
+  margin-left: 35%;
+  margin-top: 5%;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  height: 35px;
+  width: 110px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+.login-btn:hover{
+  background-color: black;
+  color: white;
+}
+.login-div-right{
+  height: 100%;
+  width: 50%;
+  border-radius: 0 20px 20px 0;
+  background-color: #262d6e;
+  overflow: hidden;
+}
+.signup-char{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 1px;
+  margin-left: 32%;
+  margin-top: 60%;
+  cursor: pointer;
+  color: #4251db;
+}
+.signup-info-container-div{
+  width: 100%;
+  
+}
+.signup-input-name{
+  height: 38px;
+  width: 258px;
+  border-radius: 8px;
+  margin-left: 16%;
+  margin-top: 2%;
+  font-size: 18px; 
+  padding-left: 3%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  font-family:calibri;
+  outline: none;
+  border: none;
+  transition: margin-top 0.5s ease-in-out;
+}
+input[type="text"]::placeholder {
+  font-size: 16px; 
+  padding-left: 1%;
+  letter-spacing: 1px;
+  font-family:calibri;
+}
+.signup-input-mail{
+  height: 38px;
+  width: 258px;
+  border-radius: 8px;
+  margin-left: 16%;
+  margin-top: 5%;
+  font-size: 18px; 
+  padding-left: 3%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  font-family:calibri;
+  outline: none;
+  border: none;
+}
+input[type="email"]::placeholder {
+  font-size: 16px; 
+  padding-left: 1%;
+  letter-spacing: 1px;
+  font-family:calibri;
+}
+.signup-input-contact{
+  height: 38px;
+  width: 258px;
+  border-radius: 8px;
+  margin-left: 16%;
+  margin-top: 5%;
+  font-size: 18px; 
+  padding-left: 3%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  font-family:calibri;
+  outline: none;
+  border: none;
+}
+input[type="tel"]::placeholder {
+  font-size: 16px; 
+  padding-left: 1%;
+  letter-spacing: 1px;
+  font-family:calibri;
+}
+.signup-btn{
+  position: relative;
+  margin-left: 35%;
+  margin-top: 5%;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  height: 35px;
+  width: 110px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+.signup-btn:hover{
+  background-color: black;
+  color: white;
+}
+
+/* Add this to your existing CSS */
+
+/* Smooth transition for margin-top */
+.login-char, .signup-char {
+  transition: margin-top 0.5s ease-in-out;
+}
+
+/* Smooth transition for visibility */
+.login-info-container-div, .signup-info-container-div {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.login-info-container-div {
+  opacity: 1;
+  display: block;
+}
+
+.signup-info-container-div {
+  opacity: 0;
+  
+}
+
+.login-info-container-div.show {
+  opacity: 1;
+}
+
+.signup-info-container-div.show {
+  opacity: 1;
+}
+
+.login-info-container-div.hide {
+  opacity: 0;
+}
+
+.signup-info-container-div.hide {
+  opacity: 0;
+}
+.show {
+  display: block;
+}
+
+
+.hero-div{
+  height: 120.8vh; 
+  width: 100vw; 
+  margin-top: -10vh;
+  position: relative;
+  z-index: -1;
+  background-image: url('../images/hero-img-main.png');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-color: transparent; 
+  background-size: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

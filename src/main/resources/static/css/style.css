@@ -1,0 +1,1410 @@
+.index-body{
+  margin: 0;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar{
+  width: 7px;
+}
+::-webkit-scrollbar-track{
+  background-color: #d6ddd6;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 100vw;
+  background: linear-gradient(to Bottom, #6a0ae7, #e209d7);
+}
+.nav-bar{
+  margin-top: -70vh; 
+  height: 160vh;
+  width: 100vw;
+  background-color: rgba(27, 27, 27, 0.192);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  display: flex;
+  border-radius: 0 0 50% 50%;
+  transition: border-radius .5s ease, height .5s ease;
+}
+.navbar-menu{
+  display: flex;
+  position: absolute;
+  margin-top: 71.8vh;
+  margin-left: 60vw;
+  transition: margin-left .5s ease,opacity .2s ease,visibility .2s ease;
+}
+.navbar-menu li{
+  font-size: 2vh;
+  font-size: 1.5vw;
+  margin-left: 2vw;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  list-style-type: none;
+  cursor: pointer;
+  font-family: 'Poppins',sans-serif;
+  transition: background-color .5s ease;
+}
+.navbar-menu li:hover{
+  background-color: rgba(248, 252, 252, 0.39);
+}
+/*.nav-bar:hover{
+  border-radius: 0 0 0 0;
+  height: 81vh;
+}*/
+.nav-bar-login-btn{
+  height: 7.5vh;
+  width: 12vw;
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  letter-spacing: 2px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 2.3vw;
+  margin-top: 71.8vh;
+  transition: background-color .5s ease;
+  font-size: 2vh;
+  font-size: 1.5vw;
+  cursor: pointer;
+  transition: margin-left .5s ease, opacity .6s ease, visibility .6s ease;
+}
+.nav-bar-login-btn:hover{
+  background-color: rgba(248, 252, 252, 0.39);
+}
+.WIMH-logo{
+  margin-top: 85vh;
+  height: 40vh;
+  width: 52vw;
+  margin-left: 8.8vw;
+  transition: margin-top .5s ease, margin-left .5s ease, height .5s ease, width .5s ease;
+}
+.search-container{
+  margin-top: 128vh;
+  position:absolute;
+  width: 25.15vw;
+  margin-left: 29.69vw;
+  transition: margin-top .5s ease, margin-left .5s ease;
+}
+.search-box{
+  width: 30.15vw;
+  height: 6.94vh;
+  padding: 0px;
+  border: 1px solid #ccc;
+  border-radius: 8px 8px 0px 0px;
+  outline: none;
+  border: none;
+  font-size: 20px; 
+  padding-left: 3%;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 530;
+  transition: height .5s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+}
+
+.suggestions-list li{
+  padding: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+.suggestions-list li:hover {
+  background-color: #f0f0f0;
+}
+.suggestions-list{
+  position: absolute;
+  top: 0px;
+  width: 27.92vw;
+  border: none;
+  box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.651), /* Bottom shadow */
+  5px 0 5px -5px rgba(0, 0, 0, 0.651), /* Right shadow */
+  -5px 0 5px -5px rgba(0, 0, 0, 0.651); /* Left shadow */
+  border-radius: 0px 0px 8px 8px;
+  background-color: #fff;
+  list-style: none;
+  margin-top: 6.8vh;
+  display: none;
+  transition: margin-top .5s ease;
+}
+.navbar-search-btn{
+  display: flex;
+  position: absolute;
+  height: 5.5vh;
+  width: 8vw;
+  border: 2px solid rgba(0, 0, 0, 0.753);
+  background-color: transparent;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 61.8vw;
+  margin-top: 128.8vh;
+  padding-top: .65vh;
+  padding-left: 1.40vw;
+  padding-bottom: .65vh;
+  padding-right: 1.40vw;
+  transition: background-color .5s ease;
+  font-size: 2.5vh;
+  font-size: 1.4vw;
+  cursor: pointer;
+  transition: margin-top .5s ease, margin-left .5s ease;
+}
+.navbar-search-btn:hover{
+  background-color: rgba(248, 252, 252, 0.39);
+}
+.threelineicon{
+  height: 8vh;
+  width: 4.03vw;
+  margin-left: 16.2vw;
+  margin-top: 71.5vh;
+  cursor: pointer;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: margin-left .5s ease, opacity .5s ease, visibility .5s ease, background-color .3s ease;
+  border: none;
+}
+.threelineicon:hover{
+  background-color: rgba(248, 252, 252, 0.39);
+}
+.threeline-menu-list {
+  display: block; /* Ensure it's part of the DOM, but hidden with transform and opacity */
+  height: 60vh;
+  width: 22vw;
+  background-color: rgba(27, 27, 27, 0.192);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  right: 0; /* Position from the right */
+  overflow: hidden;
+  transform: translateX(100%); /* Start hidden to the right */
+  opacity: 0; /* Start hidden */
+  z-index: 1000;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.WIMH-logo-menu-list{
+  height: 11vh;
+  width: 18vw;
+  margin-top: 3vh;
+  margin-left: 1.9vw;
+}
+.threeline-menu-list h3{
+  width: 100%;
+  height: 7vh;
+  top: 0;
+  margin-bottom: -3.9vh;
+  padding-left: 4vw;
+  padding-top: 3vh;
+  color: black;
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 2.8vh;
+  font-size: 1.82vw;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color .5s ease;
+}
+.menu-item{
+  margin-top: 4vh;
+}
+.threeline-menu-list h3:hover{
+  background-color: #c7d1c7;
+}
+/*
+.blurred-body *:not(.clear-blur) {
+  filter: blur(2px);
+  
+}
+
+
+.clear-blur {
+  filter: none;
+ 
+}
+.login-div {
+  display: flex;
+  height: 500px;
+  width: 800px;
+  margin-top: 50px;
+  margin-left: 280px;
+  position: fixed;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(112, 111, 111);
+  z-index: 1;
+  transform: translateY(500px);
+  opacity: 0;
+  visibility:hidden;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+.login-div-left{
+  height: 100%;
+  width: 50%;
+  border-radius: 20px 0 0 20px;
+  background-color: #4251db;
+  overflow: hidden;
+}
+.login-char{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 1px;
+  margin-left: 35%;
+  margin-top: 10%;
+  cursor: pointer;
+  color: #262d6e;
+}
+.login-input-contact{
+  position: relative;
+  height: 38px;
+  width: 258px;
+  border-radius: 8px;
+  margin-left: 16%;
+  margin-top: 2%;
+  font-size: 18px; 
+  padding-left: 3%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  font-family:calibri;
+  outline: none;
+  border: none;
+  transition: margin-top 0.5s ease-in-out;
+}
+.login-send-otp-btn{
+  position: relative;
+  margin-left: 29%;
+  margin-top: 5%;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  height: 35px;
+  width: 160px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  color: black;
+  background-color: rgb(16, 214, 66);
+  border: 1px solid black;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+.login-input-otp{
+  position: relative;
+  height: 38px;
+  width: 258px;
+  border-radius: 8px;
+  margin-left: 16%;
+  margin-top: -5%;
+  font-size: 18px; 
+  padding-left: 3%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  font-family:calibri;
+  outline: none;
+  border: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease, margin-top 0.5s ease;
+}
+.login-btn{
+  position: relative;
+  margin-left: 35%;
+  margin-top: -5%;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  height: 35px;
+  width: 110px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, margin-top .4s ease;
+}
+.login-btn:hover{
+  background-color: black;
+  color: white;
+}
+.login-or-line-div{
+  border-radius: 8px; 
+  height: 38px;
+  width: 268px;
+  background-color: #4251db;
+  margin-left: 15.5%;
+  margin-top: 2%;
+}
+.login-or-line-img{
+  height: 100%;
+  width: 100%;
+}
+.login-with-google-div{
+  border-radius: 20px; 
+  height: 38px;
+  width: 268px;
+  background-color: white;
+  margin-left: 16%;
+  margin-top: 2%;
+}
+.login-with-google-img{
+  border-radius: 20px; 
+  height: 100%;
+  width: 100%;
+}
+.login-div-right{
+  height: 100%;
+  width: 50%;
+  border-radius: 0 20px 20px 0;
+  background-color: #262d6e;
+  overflow: hidden;
+}
+.login-div-right::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.signup-char{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 1px;
+  margin-left: 32%;
+  margin-top: 60%;
+  cursor: pointer;
+  color: #4251db;
+}
+.signup-info-container-div{
+  width: 100%;
+  
+}
+.signup-input-name{
+  height: 38px;
+  width: 258px;
+  border-radius: 8px;
+  margin-left: 16%;
+  margin-top: 2%;
+  font-size: 18px; 
+  padding-left: 3%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  font-family:calibri;
+  outline: none;
+  border: none;
+  transition: margin-top 0.5s ease-in-out;
+}
+input[type="text"]::placeholder {
+  font-size: 16px; 
+  padding-left: 1%;
+  letter-spacing: 1px;
+  font-family:calibri;
+}
+.signup-input-mail{
+  height: 38px;
+  width: 258px;
+  border-radius: 8px;
+  margin-left: 16%;
+  margin-top: 5%;
+  font-size: 18px; 
+  padding-left: 3%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  font-family:calibri;
+  outline: none;
+  border: none;
+}
+input[type="email"]::placeholder {
+  font-size: 16px; 
+  padding-left: 1%;
+  letter-spacing: 1px;
+  font-family:calibri;
+}
+.signup-input-contact{
+  height: 38px;
+  width: 258px;
+  border-radius: 8px;
+  margin-left: 16%;
+  margin-top: 5%;
+  font-size: 18px; 
+  padding-left: 3%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  font-family:calibri;
+  outline: none;
+  border: none;
+}
+input[type="tel"]::placeholder {
+  font-size: 16px; 
+  padding-left: 1%;
+  letter-spacing: 1px;
+  font-family:calibri;
+}
+.signup-send-otp-btn{
+  position: relative;
+  margin-left: 29%;
+  margin-top: 5%;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  height: 35px;
+  width: 160px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  color: black;
+  background-color: rgb(16, 214, 66);
+  border: 1px solid black;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+.signup-input-otp{
+  position: relative;
+  height: 38px;
+  width: 258px;
+  border-radius: 8px;
+  margin-left: 16%;
+  margin-top: -5%;
+  font-size: 18px; 
+  padding-left: 3%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  font-family:calibri;
+  outline: none;
+  border: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease, margin-top 0.5s ease;
+}
+.signup-btn{
+  position: relative;
+  margin-left: 35%;
+  margin-top: -5%;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  height: 35px;
+  width: 110px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+.signup-btn:hover{
+  background-color: black;
+  color: white;
+}
+.signup-or-line-div{
+  border-radius: 8px; 
+  height: 38px;
+  width: 268px;
+  background-color: #262d6e;
+  margin-left: 15.5%;
+  margin-top: 2%;
+}
+.signup-or-line-img{
+  height: 100%;
+  width: 100%;
+}
+.signup-with-google-div{
+  border-radius: 20px; 
+  height: 38px;
+  width: 268px;
+  background-color: white;
+  margin-left: 16%;
+  margin-top: 2%;
+}
+.signup-with-google-img{
+  border-radius: 20px; 
+  height: 100%;
+  width: 100%;
+}
+
+
+.login-char, .signup-char {
+  transition: margin-top 0.5s ease-in-out;
+}
+
+.login-info-container-div, .signup-info-container-div {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.login-info-container-div {
+  opacity: 1;
+  display: block;
+}
+
+.signup-info-container-div {
+  opacity: 0;
+  
+}
+
+.login-info-container-div.show {
+  opacity: 1;
+}
+
+.signup-info-container-div.show {
+  opacity: 1;
+}
+
+.login-info-container-div.hide {
+  opacity: 0;
+}
+
+.signup-info-container-div.hide {
+  opacity: 0;
+}
+.show {
+  display: block;
+}
+*/
+
+.hero-div{
+  height: 100vh; 
+  width: 100vw; 
+  margin-top: -10vh;
+  position: relative;
+  z-index: -1;
+  background-image: url('./img/hero-img-main.png');
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-color: transparent; 
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------DASHBOARD PAGE------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+.dash-nav-bar{
+  margin-top: -70vh; 
+  height: 81vh;
+  width: 100vw;
+  background-color: rgba(27, 27, 27, 0.192);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  display: flex;
+  border-radius: 0 0 0 0;
+}
+.dash-navbar-menu{
+  display: flex;
+  position: absolute;
+  margin-top: 71.8vh;
+  margin-left: 60vw;
+}
+.dash-navbar-menu li{
+  font-size: 2vh;
+  font-size: 1.5vw;
+  margin-left: 2vw;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  list-style-type: none;
+  cursor: pointer;
+  font-family: 'Poppins',sans-serif;
+  transition: background-color .5s ease;
+}
+.dash-navbar-menu li:hover{
+  background-color: rgba(248, 252, 252, 0.39);
+}
+.dash-WIMH-logo{
+  margin-top: 71vh;
+  height: 10vh;
+  width: 22vw;
+  margin-left: 1.9vw;
+}
+.dash-search-container{
+  margin-top: 72.3vh;
+  position:absolute;
+  width: 25.15vw;
+  margin-left: 33.09vw;
+}
+.dash-search-box{
+  width: 30.15vw;
+  height: 6.35vh;
+  padding: 0px;
+  border: 1px solid #ccc;
+  border-radius: 8px 8px 0px 0px;
+  outline: none;
+  border: none;
+  font-size: 20px; 
+  padding-left: 3%;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 530;
+  transition: height .5s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+}
+
+.dash-suggestions-list li{
+  padding: 6px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+.dash-suggestions-list li:hover {
+  background-color: #f0f0f0;
+}
+.dash-suggestions-list{
+  position: absolute;
+  top: 0px;
+  width: 27.92vw;
+  border: none;
+  box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.651), /* Bottom shadow */
+  5px 0 5px -5px rgba(0, 0, 0, 0.651), /* Right shadow */
+  -5px 0 5px -5px rgba(0, 0, 0, 0.651); /* Left shadow */
+  border-radius: 0px 0px 8px 8px;
+  background-color: #fff;
+  list-style: none;
+  margin-top: 5.9vh;
+  display: none;
+  transition: margin-top .5s ease;
+}
+.dash-navbar-search-btn{
+  display: flex;
+  position: absolute;
+  height: 5.5vh;
+  width: 8vw;
+  border: 2px solid rgba(0, 0, 0, 0.753);
+  background-color: transparent;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 65.3vw;
+  margin-top: 72.8vh;
+  padding-top: .65vh;
+  padding-left: 1.40vw;
+  padding-bottom: .65vh;
+  padding-right: 1.40vw;
+  transition: background-color .5s ease;
+  font-size: 2.5vh;
+  font-size: 1.4vw;
+  cursor: pointer;
+  transition: margin-top .5s ease, margin-left .5s ease;
+}
+.dash-navbar-search-btn:hover{
+  background-color: rgba(248, 252, 252, 0.39);
+}
+.dash-profileicon{
+  position: absolute;
+  height: 7vh;
+  width: 3.2vw;
+  margin-left: 86.4vw;
+  margin-top: 71.9vh;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+.dash-threelineicon{
+  height: 8vh;
+  width: 4.03vw;
+  margin-left: 67.4vw;
+  margin-top: 71.5vh;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+.dash-threelineicon:hover{
+  background-color: rgba(248, 252, 252, 0.39);
+}
+.dash-threeline-menu-list {
+  height: 100vh;
+  width: 22vw;
+  background-color: rgba(27, 27, 27, 0.192);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: fixed;
+  right: 0; /* Position from the right */
+  overflow: hidden;
+  transform: translateX(100%); /* Start hidden to the right */
+  opacity: 0; /* Start hidden */
+  z-index: 1000;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.dash-WIMH-logo-menu-list{
+  height: 11vh;
+  width: 18vw;
+  margin-top: 3vh;
+  margin-left: 1.9vw;
+}
+.dash-threeline-menu-list h3{
+  width: 100%;
+  height: 7vh;
+  top: 0;
+  margin-bottom: -3.9vh;
+  padding-left: 4vw;
+  padding-top: 3vh;
+  color: black;
+  list-style-type: none;
+  cursor: pointer;
+  font-size: 2.8vh;
+  font-size: 1.82vw;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color .5s ease;
+}
+.dash-menu-item{
+  margin-top: 4vh;
+}
+.dash-threeline-menu-list h3:hover{
+  background-color: #c7d1c7;
+}
+.profile-div {
+  height: 87vh;
+  width: 35vw;
+  margin-top: 6vh;
+  margin-left: 32.50vw;
+  position: fixed;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgb(112, 111, 111);
+  z-index: 1;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(500px);
+  opacity: 0;
+  visibility:hidden;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+.profile-pic{
+  height: 30vh;
+  width: 14vw;
+  border-radius: 50%;
+  margin-top: 5vh;
+  margin-left: 10.3vw;
+  border: 2px solid #ccc;
+}
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.hidden {
+  display: none;
+}
+.upload-img-btn{
+  position: relative;
+  margin-left: 11vw;
+  margin-top: 3vh;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  height: 5.5vh;
+  width: 13vw;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+.upload-img-btn:hover{
+  background-color: black;
+  color: white;
+}
+.profile-input-name{
+  height: 5vh;
+  width: 19vw;
+  border-radius: 8px 8px 0px 0px;
+  margin-left: 7.3vw;
+  margin-top: 4vh;
+  font-size: 3.5vh; 
+  font-size: 1.4vw; 
+  padding-left: 3%;
+  background-color: #0d0d0e09;
+  font-family:calibri;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  transition: margin-top 0.5s ease-in-out;
+}
+input[type="text"]::placeholder {
+  font-size: 16px; 
+  padding-left: 1%;
+  letter-spacing: 1px;
+  font-family:calibri;
+}
+.profile-input-mail{
+  height: 5vh;
+  width: 19vw;
+  border-radius: 8px 8px 0px 0px;
+  margin-left: 7.3vw;
+  margin-top: 3vh;
+  font-size: 3.5vh; 
+  font-size: 1.4vw;  
+  padding-left: 3%;
+  background-color: #0d0d0e09;
+  font-family:calibri;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  transition: margin-top 0.5s ease-in-out;
+}
+input[type="email"]::placeholder {
+  font-size: 16px; 
+  padding-left: 1%;
+  letter-spacing: 1px;
+  font-family:calibri;
+}
+.profile-input-contact{
+  height: 5vh;
+  width: 19vw;
+  border-radius: 8px 8px 0px 0px;
+  margin-left: 7.3vw;
+  margin-top: 3vh;
+  font-size: 3.5vh; 
+  font-size: 1.4vw; 
+  padding-left: 3%;
+  background-color: #0d0d0e09;
+  font-family:calibri;
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  transition: margin-top 0.5s ease-in-out;
+}
+input[type="tel"]::placeholder {
+  font-size: 16px; 
+  padding-left: 1%;
+  letter-spacing: 1px;
+  font-family:calibri;
+}
+.save-profile-btn{
+  position: relative;
+  margin-left: 14.2vw;
+  margin-top: 4vh;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: bold;
+  height: 5.5vh;
+  width: 6.5vw;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.651);
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+.save-profile-btn:hover{
+  background-color: black;
+  color: white;
+}
+.blurred-body *:not(.clear-blur) {
+  filter: blur(2px);
+}
+.clear-blur {
+  filter: none;
+}
+.dash-hero-div{
+  height: 100vh; 
+  width: 100vw; 
+  margin-top: -10vh;
+  position: relative;
+  z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------LOGIN PAGE------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+.login-page-body, html{
+  margin: 0;
+  overflow-x: hidden;
+  background: linear-gradient(to Bottom, rgba(0, 0, 0, 0.034) , rgba(0, 0, 0, 0.034),rgb(248, 242, 159)  );
+}
+::-webkit-scrollbar{
+  width: 7px;
+}
+::-webkit-scrollbar-track{
+  background-color: #d6ddd6;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 100vw;
+  background: linear-gradient(to Bottom, rgb(248, 242, 159), rgba(0, 0, 0, 0.034) , rgba(0, 0, 0, 0.034));
+}
+.login-WIMH-logo-div{
+  height: 15vh;
+  width: 20vw;
+  margin-top: 7vh;
+  margin-left: 39.7vw;
+  border-radius: 8px;
+}
+.login-WIMH-logo-img{
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+.login-div{
+  height: 74vh;
+  width: 28vw;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.096);
+  margin-top: 5vh;
+  margin-left: 35.7vw;
+}
+.login-char{
+  font-family: 'Poppins', sans-serif ;
+  font-weight: 550;
+  font-size: 4vh;
+  font-size: 1.7vw;
+  margin-left: 11.5vw;
+  margin-top: 5vh;
+}
+.login-input-contact{
+  height: 4.5vh;
+  width: 20vw;
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  padding-left: 3%;
+  outline: none;
+  margin-left: 3.3vw;
+  margin-top: 2vh;
+  color: #4d4c4c;
+  border-radius: 5px;
+  font-family:calibri;
+}
+.login-input-contact:focus{
+  border-color: #007BFF; 
+}
+input[type="tel"]::placeholder {
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  padding-left: 1%;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  font-family:calibri;
+}
+.login-send-otp-btn{
+  height: 4.9vh;
+  width: 21.2vw;
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  font-weight: bolder;
+  text-align: center;
+  margin-left: 3.3vw;
+  margin-top: 3vh;
+  color: black;
+  border-radius: 5px;
+  font-family:calibri;
+  background-color: #26f31fd3;
+  cursor: pointer;
+}
+.login-input-otp{
+  height: 4.5vh;
+  width: 20vw;
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  padding-left: 3%;
+  outline: none;
+  margin-left: 3.3vw;
+  margin-top: 5vh;
+  color: #4d4c4c;
+  border-radius: 5px;
+  font-family:calibri;
+  opacity: 1;
+  visibility: visible;
+  transition: margin-top .5s ease, opacity .5s ease, visibility .5s ease;
+}
+.login-input-otp:focus{
+  border-color: #007BFF; 
+}
+input[type="text"]::placeholder {
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  padding-left: 1%;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  font-family:calibri;
+}
+.login-resend-otp{
+  font-family: 'Poppins', sans-serif;
+  font-size: 12.5px;
+  font-weight: bolder;
+  margin-top: -5vh;
+  margin-left: 4vw;
+  color: rgb(9, 119, 221);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: margin-top .5s ease, opacity .5s ease, visibility .5s ease;
+}
+.login-resend-otp.disable {
+  color: rgb(175, 173, 173);
+  cursor: not-allowed;
+}
+.login-btn{
+  height: 4.9vh;
+  width: 21.2vw;
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  font-weight: bolder;
+  text-align: center;
+  margin-left: 3.3vw;
+  margin-top: -5vh;
+  color: black;
+  border-radius: 5px;
+  font-family:calibri;
+  background-color: #1f8df3d3;
+  cursor: pointer;
+  
+  transition: margin-top .5s ease;
+}
+.login-or-char{
+  font-family: 'Poppins', sans-serif ;
+  font-weight: 580;
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  margin-top: 4vh;
+  margin-left: 13.2vw;
+  color: #8f8e8e;
+}
+.login-with-google-div{
+  border-radius: 20px; 
+  height: 6.1vh;
+  width: 20vw;
+  background-color: white;
+  margin-left: 4vw;
+  margin-top: 4vh;
+  border: 1px solid rgba(0, 0, 0, 0.219);
+  cursor: pointer;
+}
+.login-with-google-img{
+  border-radius: 20px; 
+  height: 100%;
+  width: 100%;
+}
+.dont-have-account{
+  font-family: 'Poppins', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  margin-top: 3vh;
+  margin-left: 43vw;
+  color: rgb(9, 119, 221);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------SIGNUP PAGE------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+.signup-page-body, html{
+  margin: 0;
+  overflow-x: hidden;
+  background: linear-gradient(to Bottom, rgba(0, 0, 0, 0.034) , rgba(0, 0, 0, 0.034),rgb(248, 232, 159));
+}
+::-webkit-scrollbar{
+  width: 7px;
+}
+::-webkit-scrollbar-track{
+  background-color: #d6ddd6;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 100vw;
+  background: linear-gradient(to Bottom, rgb(248, 242, 159), rgba(0, 0, 0, 0.034) , rgba(0, 0, 0, 0.034));
+}
+.signup-page-body-div{
+  display: flex;
+}
+.signup-page-left-div{
+  width: 50vw;
+  height: 115vh;
+}
+.signup-WIMH-logo-div{
+  height: 15vh;
+  width: 20vw;
+  margin-top: 15vh;
+  margin-left: 10vw;
+  border-radius: 8px;
+}
+.signup-WIMH-logo-img{
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+.signup-page-right-div{
+  width: 50vw;
+  height: 115vh;
+}
+.signup-div{
+  height: 88vh;
+  width: 28vw;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.096);
+  margin-top: 15vh;
+  margin-left: 5.7vw;
+}
+.signup-char{
+  font-family: 'Poppins', sans-serif ;
+  font-weight: 550;
+  font-size: 4vh;
+  font-size: 1.7vw;
+  margin-left: 10.9vw;
+  margin-top: 5vh;
+}
+.signup-input-name{
+  height: 4.5vh;
+  width: 20vw;
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  padding-left: 3%;
+  outline: none;
+  margin-left: 3.3vw;
+  margin-top: 2vh;
+  color: #4d4c4c;
+  border-radius: 5px;
+  font-family:calibri;
+}
+.signup-input-name:focus{
+  border-color: #007BFF; 
+}
+input[type="text"]::placeholder {
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  padding-left: 1%;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  font-family:calibri;
+}
+.signup-input-mail{
+  height: 4.5vh;
+  width: 20vw;
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  padding-left: 3%;
+  outline: none;
+  margin-left: 3.3vw;
+  margin-top: 2vh;
+  color: #4d4c4c;
+  border-radius: 5px;
+  font-family:calibri;
+}
+.signup-input-mail:focus{
+  border-color: #007BFF; 
+}
+input[type="email"]::placeholder {
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  padding-left: 1%;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  font-family:calibri;
+}
+.signup-input-contact{
+  height: 4.5vh;
+  width: 20vw;
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  padding-left: 3%;
+  outline: none;
+  margin-left: 3.3vw;
+  margin-top: 2vh;
+  color: #4d4c4c;
+  border-radius: 5px;
+  font-family:calibri;
+}
+.signup-input-contact:focus{
+  border-color: #007BFF; 
+}
+input[type="tel"]::placeholder {
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  padding-left: 1%;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  font-family:calibri;
+}
+.signup-send-otp-btn{
+  height: 4.9vh;
+  width: 21.2vw;
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  font-weight: bolder;
+  text-align: center;
+  margin-left: 3.3vw;
+  margin-top: 3vh;
+  color: black;
+  border-radius: 5px;
+  font-family:calibri;
+  background-color: #26f31fd3;
+  cursor: pointer;
+}
+.signup-input-otp{
+  height: 4.5vh;
+  width: 20vw;
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  padding-left: 3%;
+  outline: none;
+  margin-left: 3.3vw;
+  margin-top: -5vh;
+  color: #4d4c4c;
+  border-radius: 5px;
+  font-family:calibri;
+  opacity: 0;
+  visibility: hidden;
+  transition: margin-top .5s ease, opacity .5s ease, visibility .5s ease;
+}
+.signup-input-otp:focus{
+  border-color: #007BFF; 
+}
+input[type="text"]::placeholder {
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  padding-left: 1%;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  font-family:calibri;
+}
+.signup-resend-otp{
+  font-family: 'Poppins', sans-serif;
+  font-size: 12.5px;
+  font-weight: bolder;
+  margin-top: -5vh;
+  margin-left: 4vw;
+  color: rgb(9, 119, 221);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: margin-top .5s ease, opacity .5s ease, visibility .5s ease;
+}
+.signup-resend-otp.disabled {
+  color: rgb(175, 173, 173);
+  cursor: not-allowed;
+}
+.signup-btn{
+  height: 4.9vh;
+  width: 21.2vw;
+  border: 1px solid rgba(0, 0, 0, 0.253);
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  font-weight: bolder;
+  text-align: center;
+  margin-left: 3.3vw;
+  margin-top: -5vh;
+  color: black;
+  border-radius: 5px;
+  font-family:calibri;
+  background-color: #1f8df3d3;
+  cursor: pointer;
+  transition: margin-top .5s ease;
+}
+.signup-or-char{
+  font-family: 'Poppins', sans-serif ;
+  font-weight: 580;
+  font-size: 2.5vh;
+  font-size: 1.1vw;
+  margin-top: 4vh;
+  margin-left: 13.2vw;
+  color: #8f8e8e;
+}
+.signup-with-google-div{
+  border-radius: 20px; 
+  height: 6.1vh;
+  width: 20vw;
+  background-color: white;
+  margin-left: 4vw;
+  margin-top: 4vh;
+  border: 1px solid rgba(0, 0, 0, 0.219);
+  cursor: pointer;
+}
+.signup-with-google-img{
+  border-radius: 20px; 
+  height: 100%;
+  width: 100%;
+}
+.already-have-account{
+  font-family: 'Poppins', sans-serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  margin-top: 3vh;
+  margin-left: 13vw;
+  color: rgb(9, 119, 221);
+  cursor: pointer;
+}
