@@ -5,7 +5,6 @@ import com.wimh.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Random;
 
 @Service
 public class UserServices {
@@ -13,15 +12,13 @@ public class UserServices {
     @Autowired
     private UserRepository userRepository;
 
+    public UserData registerUser(String name,String email,String mobileNumber,String password,String repassword){
 
-
-    public UserData registerUser(String name,String email,String mobileNumber, String otp){
-
-        if(mobileNumber == null || email == null) return null;
+       if(!password.equals(repassword)) return null;
 
         else {
 
-            if(userRepository.findByMobileNumber(mobileNumber).isPresent()){
+            if(userRepository.findByEmail(email).isPresent()){
                 System.out.println("Duplicate Login");
                 return null;
             }
@@ -31,13 +28,13 @@ public class UserServices {
             userData.setName(name);
             userData.setEmail(email);
             userData.setMobileNumber(mobileNumber);
-            userData.setOtp(otp);
+            userData.setPassword(password);
 
             return userRepository.save(userData);
         }
     }
 
-    public UserData authenticate(String mobileNumber,String otp){
-        return userRepository.findByMobileNumberAndOtp(mobileNumber,otp).orElse(null);
+    public UserData authenticate(String email,String password){
+        return userRepository.findByEmailAndPassword(email,password).orElse(null);
     }
 }

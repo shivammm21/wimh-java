@@ -18,7 +18,7 @@ public class UserData {
 
     String mobileNumber;
 
-    String otp;
+    String password;
 
     @Override
     public String toString() {
@@ -27,11 +27,19 @@ public class UserData {
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", mobileNumber='" + mobileNumber + '\'' +
-                ", otp='" + otp + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 
     // Getters and Setters
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public Integer getId() {
         return id;
@@ -65,13 +73,8 @@ public class UserData {
         this.mobileNumber = mobileNumber;
     }
 
-    public String getOtp() {
-        return otp;
-    }
 
-    public void setOtp(String otp) {
-        this.otp = otp;
-    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -82,11 +85,11 @@ public class UserData {
                 Objects.equals(name, userData.name) &&
                 Objects.equals(email, userData.email) &&
                 Objects.equals(mobileNumber, userData.mobileNumber) &&
-                Objects.equals(otp, userData.otp);
+                Objects.equals(password, userData.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, email, mobileNumber, otp);
+        return Objects.hash(id, name, email, mobileNumber, password);
     }
 }

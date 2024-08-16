@@ -546,79 +546,35 @@ function loginsendOTP() {
 
 /*----------------------------------------SIGNUP PAGE-----------------------------------------------*/
 
+document.addEventListener('DOMContentLoaded', function() {
+    const signupForm = document.getElementById('signup-form');
+    const passwordInput = document.getElementById('signup-input-password');
+    const rePasswordInput = document.getElementById('signup-input-repassword');
+    const errorMessage = document.getElementById('error-message');
 
+    signupForm.addEventListener('submit', function(event) {
+        // Remove previous error message
+        if (errorMessage.style.visibility === 'visible') {
+            errorMessage.style.opacity = 0;
+            errorMessage.style.visibility = 'hidden';
+        }
 
-
-
-
-
-
-
-
-
-function signupsendOTP() {
-    const signupsendotpbtn = document.getElementById('signup-send-otp-btn');
-    const signupinputcontact = document.getElementById('signup-input-contact');
-    const signupinputotp = document.getElementById('signup-input-otp');
-    const signupresendotp = document.getElementById('signup-resend-otp');
-    const signupbtn = document.getElementById('signup-btn');
-    //signupsendotpbtn.disabled = true;
-    //signupinputcontact.disabled = true;
-    //signupsendotpbtn.style.backgroundColor = 'lightgrey';
-    //signupinputcontact.style.backgroundColor = 'lightgrey';
-    //signupsendotpbtn.style.cursor = 'not-allowed';
-    //signupinputcontact.style.cursor = 'not-allowed';
-    signupinputotp.style.opacity = '1';
-    signupinputotp.style.visibility = 'visible';
-    signupinputotp.style.marginTop = '4vh';
-    signupresendotp.style.opacity = '1';
-    signupresendotp.style.visibility = 'visible';
-    signupresendotp.style.marginTop = '3vh';
-    signupbtn.style.marginTop = '0vh';
-
-    document.getElementById('signup-send-otp-btn').addEventListener('click', function() {
-        const form = document.getElementById('signup-form');
-        const formData = new FormData(form);
-
-        fetch('/register', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            // Handle the response data or update the UI accordingly
-            console.log('Response:', data);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+        // Check if passwords match
+        if (passwordInput.value !== rePasswordInput.value) {
+            event.preventDefault(); // Prevent form submission
+            errorMessage.textContent = 'Passwords do not match.';
+            errorMessage.style.opacity = 1;
+            errorMessage.style.visibility = 'visible';
+            // Optionally, scroll to the error message
+            errorMessage.scrollIntoView({ behavior: 'smooth' });
+        }
     });
+});
 
 
 
-    function startTimer() {
-        const h6Element = document.querySelector('.signup-resend-otp');
-        const timerSpan = document.getElementById('timer');
-        let timeLeft = 30;
 
-        // Disable the h6 element
-        h6Element.classList.add('disabled');
-        h6Element.style.pointerEvents = 'none';
 
-        // Start the countdown
-        let countdown = setInterval(function() {
-            if (timeLeft <= 0) {
-                clearInterval(countdown);
 
-                // Re-enable the h6 element when the timer reaches 00:00
-                h6Element.classList.remove('disabled');
-                h6Element.style.pointerEvents = 'auto';
-                timerSpan.textContent = " 00:00";
-            } else {
-                timerSpan.textContent = ` 00:${timeLeft < 10 ? '0' : ''}${timeLeft}`;
-                timeLeft -= 1;
-            }
-        }, 1000);
-    }
-   startTimer();
-}
+
+

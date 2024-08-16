@@ -15,10 +15,10 @@
     <form action="/login" method="post" th:object="${loginRequest}">
     <div class="login-div">
         <h1 class="login-char">Login</h1>
-        <input class="login-input-contact " name="mobileNumber" id="login-input-contact" type="tel" placeholder="Mobile no" required><br>
+        <input class="login-input-email " name="email" id="login-input-contact" type="email" placeholder="Email" required><br>
         <!--<button class="login-send-otp-btn" id="login-send-otp-btn" onclick="loginsendOTP()">Send OTP</button><br> -->
-        <input class="login-input-otp" name="otp" id="login-input-otp" type="text" placeholder="Enter OTP" required><br>
-        <h6 class="login-resend-otp" id="login-resend-otp">Resend OTP<span id="timer">&nbsp;00:30</span></h6><br>
+        <input class="login-input-password" name="password" id="login-input-otp" type="password" placeholder="Password" required><br>
+        <!-- <h6 class="login-resend-otp" id="login-resend-otp">Resend OTP<span id="timer">&nbsp;00:30</span></h6><br> -->
         <button class="login-btn" id="login-btn">Login</button><br>
         <h1 class="login-or-char">or</h1>
         <div class="login-with-google-div">
