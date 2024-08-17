@@ -20,6 +20,16 @@ public class UserData {
 
     String password;
 
+    String profilePicturePath;
+
+    public String getProfilePicturePath() {
+        return profilePicturePath;
+    }
+
+    public void setProfilePicturePath(String profilePicturePath) {
+        this.profilePicturePath = profilePicturePath;
+    }
+
     @Override
     public String toString() {
         return "UserData{" +

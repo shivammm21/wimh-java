@@ -574,6 +574,74 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+//-------------------------------Profile Pic Upload--------------------------------
+
+// Function to open the file dialog
+function openFileDialog() {
+    document.getElementById('file-input').click();
+}
+
+// Function to handle the file input change event
+function loadImage(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const profilePic = document.getElementById('profile-pic');
+            profilePic.style.backgroundImage = `url(${e.target.result})`;
+            profilePic.style.backgroundSize = 'cover';
+            profilePic.style.backgroundPosition = 'center';
+        };
+        reader.readAsDataURL(file);
+    }
+}
+
+// Function to handle profile save action
+function saveProfile() {
+    const fileInput = document.getElementById('file-input');
+    const userId = document.getElementById('user-email').value;
+    if (fileInput.files.length > 0) {
+        const formData = new FormData();
+        formData.append('profileImage', fileInput.files[0]);
+        formData.append('userId', userId);
+
+        fetch('/upload-profile-image', {
+            method: 'POST',
+            body: formData
+        }).then(response => response.json())
+          .then(data => {
+              if (data.success) {
+                  alert('Profile image uploaded successfully!');
+                  loadProfilePicture();
+              } else {
+                  alert('Failed to upload image.');
+              }
+          });
+    } else {
+        alert('No image selected.');
+    }
+}
+
+// Function to load and display the profile picture on page load
+function loadProfilePicture() {
+    const userId = document.getElementById('user-email').value;
+    fetch(`/user-profile?userId=${userId}`)
+        .then(response => response.json())
+        .then(user => {
+            if (user && user.profilePicturePath) {
+                const profilePic = document.getElementById('profile-pic');
+                profilePic.style.backgroundImage = `url(/${user.profilePicturePath})`;
+                profilePic.style.backgroundSize = 'cover';
+                profilePic.style.backgroundPosition = 'center';
+            }
+        });
+}
+
+// Call this function to load the profile picture on page load
+window.onload = loadProfilePicture;
+
+
+
 
 
 

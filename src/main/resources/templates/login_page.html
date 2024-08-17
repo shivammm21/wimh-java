@@ -33,39 +33,5 @@
 </form>
 </body>
 
-<script src="https://accounts.google.com/gsi/client" async defer></script>
-
-<script>
-    function handleCredentialResponse(response) {
-        console.log("Encoded JWT ID token: " + response.credential);
-        const token = response.credential;
-        fetch('/login/google', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({token})
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                window.location.href = '/dashboard';
-            } else {
-                alert('Google Sign-In failed.');
-            }
-        });
-    }
-
-    window.onload = function () {
-        google.accounts.id.initialize({
-            client_id: '1041539689762-bn4fqk8vvu6l4362o52kksgkn0k9m45r.apps.googleusercontent.com',
-            callback: handleCredentialResponse
-        });
-        google.accounts.id.renderButton(
-            document.getElementById("login-with-google-div"),
-            { theme: "outline", size: "large" }
-        );
-        google.accounts.id.prompt();
-    }
-</script>
-
 <script src="./img/script.js"></script>
 </html>

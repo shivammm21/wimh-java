@@ -45,7 +45,7 @@ public class PageController {
         UserData authenticated = userServices.authenticate(userData.getEmail(), userData.getPassword());
 
         if (authenticated != null) {
-            model.addAttribute("userLogin", authenticated.getName());
+            model.addAttribute("userEmail", authenticated.getEmail());
             return "dash_page";
         } else {
             model.addAttribute("loginError", "Invalid email or password.");

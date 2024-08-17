@@ -29,6 +29,7 @@
     <h3>FAQ</h3>
     <h3 onclick="dispLoginDiv()">LOGOUT</h3>
 </div>
+<input type="hidden" id="user-email" value="${userEmail}">
 <div id="profile-div" class="profile-div clear-blur">
     <div class="profile-pic clear-blur" id="profile-pic"></div>
     <button onclick="openFileDialog()" class="upload-img-btn clear-blur">Upload Image</button><br>
@@ -36,7 +37,7 @@
     <input class="profile-input-name clear-blur" type="text" placeholder="Name" required><br>
     <input class="profile-input-mail clear-blur" type="email" placeholder="E-mail" required><br>
     <input class="profile-input-contact clear-blur" type="tel" placeholder="Mobile no" required><br>
-    <button class="save-profile-btn clear-blur">Save</button>
+    <button class="save-profile-btn clear-blur" onclick="saveProfile()">Save</button>
 </div>
 
 
