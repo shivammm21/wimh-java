@@ -19,6 +19,7 @@
         <!--<button class="login-send-otp-btn" id="login-send-otp-btn" onclick="loginsendOTP()">Send OTP</button><br> -->
         <input class="login-input-password" name="password" id="login-input-otp" type="password" placeholder="Password" required><br>
         <!-- <h6 class="login-resend-otp" id="login-resend-otp">Resend OTP<span id="timer">&nbsp;00:30</span></h6><br> -->
+        <div th:if="${loginError}" class="login-error-message" th:text="${loginError}"></div><br>
         <button class="login-btn" id="login-btn">Login</button><br>
         <h1 class="login-or-char">or</h1>
         <div class="login-with-google-div">
@@ -31,24 +32,22 @@
 
 </form>
 </body>
-<script>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
 <script>
     function handleCredentialResponse(response) {
         console.log("Encoded JWT ID token: " + response.credential);
-        // Send the token to your server for verification and user authentication
         const token = response.credential;
         fetch('/login/google', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({token})
         })
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                window.location.href = '/dashboard'; // Redirect to the dashboard
+                window.location.href = '/dashboard';
             } else {
                 alert('Google Sign-In failed.');
             }
@@ -57,17 +56,15 @@
 
     window.onload = function () {
         google.accounts.id.initialize({
-            client_id: 'YOUR_GOOGLE_CLIENT_ID',
+            client_id: '1041539689762-bn4fqk8vvu6l4362o52kksgkn0k9m45r.apps.googleusercontent.com',
             callback: handleCredentialResponse
         });
         google.accounts.id.renderButton(
-            document.getElementById("login-with-google-div"), // HTML element to render the button
-            { theme: "outline", size: "large" } // customization attributes
+            document.getElementById("login-with-google-div"),
+            { theme: "outline", size: "large" }
         );
-        google.accounts.id.prompt(); // Automatically prompts the user to sign in
+        google.accounts.id.prompt();
     }
-</script>
-
 </script>
 
 <script src="./img/script.js"></script>

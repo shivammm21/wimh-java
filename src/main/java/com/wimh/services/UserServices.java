@@ -37,4 +37,8 @@ public class UserServices {
     public UserData authenticate(String email,String password){
         return userRepository.findByEmailAndPassword(email,password).orElse(null);
     }
+    public UserData findByEmail(String email) {
+        return userRepository.findByEmail(email).orElse(null);
+    }
+
 }
